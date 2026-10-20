@@ -1,4 +1,4 @@
-const WHATSAPP_NUMBER = '50667283489';
+const WHATSAPP_NUMBER = '50660283489';
 
 // Funcionalidad para el menú hamburguesa en dispositivos móviles
 const navSlide = () => {
