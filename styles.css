@@ -1,0 +1,334 @@
+/* Variables de color - Contraste elegante y nocturno */
+:root {
+    --primary-blue: #0d2b52;
+    --primary-blue-light: #183b66;
+    --gold: #c49033;
+    --bg-light: #fdfbf7;     /* Crema muy tenue para la primera sección */
+    --bg-alt: #f4f6f9;       /* Gris-azulado suave para la segunda sección */
+    --card-bg: #ffffff;
+    --text-dark: #2c3e50;
+    --text-muted: #6c7a89;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+/* --- Header & Nav Minimalista --- */
+header {
+    background-color: var(--card-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 5%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+}
+
+.nav-centered {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2.5rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--primary-blue);
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--gold);
+}
+
+/* Menú hamburguesa para móviles */
+.burger {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    right: 5%;
+    top: 15px;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: var(--primary-blue);
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+/* --- Hero Section - Tema Nocturno/Descanso --- */
+.hero {
+    /* Gradiente azul marino elegante */
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-blue-light) 100%);
+    min-height: 65vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 3rem 20px;
+}
+
+.hero-content {
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-logo {
+    max-width: 380px;
+    width: 90%;
+    margin-bottom: 2rem;
+    /* El logo ahora se ve como una tarjeta blanca elevada sobre el fondo oscuro */
+    background-color: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 16px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+}
+
+.hero p {
+    font-size: 1.25rem;
+    font-weight: 300;
+    color: #e2e8f0; /* Texto claro para resaltar en el fondo oscuro */
+    margin-bottom: 2.5rem;
+    max-width: 600px;
+}
+
+/* Botón dorado en el Hero */
+.btn-primary {
+    display: inline-block;
+    padding: 12px 35px;
+    background-color: transparent;
+    color: var(--gold);
+    border: 2px solid var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--gold);
+    color: #ffffff;
+    box-shadow: 0 5px 15px rgba(196, 144, 51, 0.4);
+}
+
+/* --- Catálogo (Cuadrícula 2x2) --- */
+.catalog-section {
+    padding: 6rem 5%;
+}
+
+/* Alternancia de colores para romper la monotonía */
+#almohadas {
+    background-color: var(--bg-light); /* Crema suave */
+}
+
+#colchones {
+    background-color: var(--bg-alt); /* Gris-azulado suave */
+}
+
+h2 {
+    color: var(--primary-blue);
+    font-size: 2.4rem;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 4rem;
+    letter-spacing: 1px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 2.5rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Tarjetas de Producto */
+.card {
+    background: var(--card-bg);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.04);
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(13, 43, 82, 0.15);
+}
+
+.card img {
+    width: 100%;
+    height: 320px;
+    object-fit: contain;
+    background-color: #ffffff;
+    padding: 15px;
+    border-bottom: 3px solid var(--gold); /* Un toque dorado debajo de cada imagen */
+}
+
+.card h3 {
+    color: var(--primary-blue);
+    padding: 1.5rem 1.5rem 0.5rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.card p {
+    padding: 0 1.5rem 1.5rem;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    flex-grow: 1;
+}
+
+/* --- Footer Elegante --- */
+footer {
+    background-color: var(--primary-blue);
+    color: rgba(255,255,255,0.8);
+    padding: 4rem 5% 1.5rem;
+    text-align: center;
+    border-top: 5px solid var(--gold);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+}
+
+.brand h3 {
+    color: var(--gold);
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+}
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.social-links a {
+    color: rgba(255,255,255,0.9);
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.social-links a i {
+    margin-right: 10px;
+    color: var(--gold);
+    font-size: 1.3rem;
+}
+
+.social-links a:hover {
+    color: var(--gold);
+}
+
+.copy {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 1.5rem;
+    font-size: 0.9rem;
+}
+
+/* --- Botón flotante WhatsApp --- */
+.float-wa {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+    z-index: 100;
+    transition: transform 0.3s ease;
+}
+
+.float-wa:hover {
+    transform: scale(1.1);
+}
+
+/* --- Responsive (Celulares y Tablets) --- */
+@media screen and (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+    }
+    
+    .social-links {
+        align-items: center;
+    }
+    
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .nav-links {
+        position: absolute;
+        right: 0;
+        height: 90vh;
+        top: 60px;
+        background-color: var(--card-bg);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        transform: translateX(100%);
+        transition: transform 0.4s ease-in-out;
+        box-shadow: -5px 10px 15px rgba(0,0,0,0.05);
+    }
+    
+    .nav-links.nav-active {
+        transform: translateX(0%);
+    }
+    
+    .burger {
+        display: block;
+    }
+    
+    .card img {
+        height: 280px;
+    }
+}
